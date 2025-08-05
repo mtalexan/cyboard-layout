@@ -22,7 +22,7 @@
             label = "MO_RELEASE_ALL";
         };
 
-        to_w_mod: to_w_mod {
+        to_w_mod: to_w_mod {6
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -47,7 +47,7 @@
 &kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T               &kp Y      &kp U      &kp I          &kp O    &kp P     &kp BSLH
 &kp TAB    &kp A   &kp S   &kp D         &kp F         &kp G               &kp H      &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C         &kp V         &kp B               &kp N      &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-&kp LCTRL  &trans  &mo 2   &kp LEFT_GUI                                                          &trans         &trans   &trans    &kp RIGHT_CONTROL
+&kp LCTRL  &trans  &mo 2   &kp LEFT_GUI  &trans                                       &trans     &trans         &trans   &trans    &kp RIGHT_CONTROL
                                          &trans        &kp TAB  &kp ESC    &mkp MCLK  &mkp LCLK  &mkp RCLK
                                          &kp LEFT_ALT  &mo 1    &mo 5      &kp ENTER  &kp SPACE  &kp BACKSPACE
             >;
@@ -60,7 +60,7 @@
 &trans  &trans                &trans                  &trans             &trans                &trans            &kp PAGE_UP    &kp HOME               &kp UP             &kp END                  &trans                 &trans
 &trans  &kp LEFT_GUI          &kp LEFT_SHIFT          &kp LCTRL          &kp LEFT_ALT          &trans            &kp PAGE_DOWN  &kp LEFT               &kp DOWN           &kp RIGHT                &trans                 &trans
 &trans  &to_w_mod 7 LEFT_GUI  &to_w_mod 7 LEFT_SHIFT  &to_w_mod 7 LCTRL  &to_w_mod 7 LEFT_ALT  &trans            &trans         &to_w_mod 6 RIGHT_ALT  &to_w_mod 6 RCTRL  &to_w_mod 6 RIGHT_SHIFT  &to_w_mod 6 RIGHT_GUI  &trans
-&trans  &trans                &trans                  &trans                                                                                           &trans             &trans                   &trans                 &trans
+&trans  &trans                &trans                  &trans             &trans                                                 &trans                 &trans             &trans                   &trans                 &trans
                                                                          &trans                &trans  &trans    &trans         &trans                 &trans
                                                                          &trans                &trans  &trans    &trans         &trans                 &trans
             >;
@@ -73,7 +73,7 @@
 &sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
 &bootloader  &trans        &trans        &trans        &trans        &trans                  &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
 &to 4        &trans        &trans        &trans        &trans        &trans                  &trans  &trans           &trans           &trans           &trans           &to 4
-&to 4        &trans        &trans        &trans                                                                       &trans           &trans           &trans           &to 4
+&to 4        &trans        &trans        &trans        &trans                                        &trans           &trans           &trans           &trans           &to 4
                                                        &trans        &trans        &trans    &trans  &trans           &trans
                                                        &trans        &trans        &trans    &trans  &trans           &trans
             >;
@@ -86,7 +86,7 @@
 &trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans                                                  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
                                       &trans     &trans  &trans    &trans  &trans  &trans
                                       &trans     &trans  &trans    &trans  &trans  &trans
             >;
@@ -99,7 +99,7 @@
 &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9            &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
 &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N1            &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7
 &kp N8  &kp N9  &kp N0  &kp N1  &kp N2  &kp N3            &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9
-&kp N0  &kp N1  &kp N2  &kp N3                                            &kp N7  &kp N8  &kp N9  &kp N0
+&kp N0  &kp N1  &kp N2  &kp N3  &trans                            &trans  &kp N7  &kp N8  &kp N9  &kp N0
                                 &kp N1  &kp N2  &kp N3    &kp N4  &kp N5  &kp N6
                                 &kp N7  &kp N8  &kp N9    &kp N0  &kp N1  &kp N2
             >;
@@ -112,7 +112,7 @@
 &trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT            &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                 &kp N6     &kp N7         &kp N8        &kp N9                &kp N0                 &trans
 &trans  &trans           &trans       &kp GRAVE  &kp MINUS   &trans                 &trans     &kp EQUAL      &kp LBKT      &kp RBKT              &trans                 &trans
-&trans  &trans           &trans       &trans                                                                  &trans        &trans                &trans                 &trans
+&trans  &trans           &trans       &trans     &trans                                        &trans         &trans        &trans                &trans                 &trans
                                                  &trans      &trans       &trans    &trans     &trans         &trans
                                                  &trans      &trans       &trans    &trans     &trans         &kp DELETE
             >;
@@ -125,7 +125,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans         &trans     &trans           &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans         &trans     &trans           &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp RIGHT_ALT  &kp RCTRL  &kp RIGHT_SHIFT  &kp RIGHT_GUI  &trans
-&trans  &trans  &trans  &trans                                                   &trans     &trans           &trans         &trans
+&trans  &trans  &trans  &trans  &trans                            &trans         &trans     &trans           &trans         &trans
                                 &trans  &trans  &trans    &trans  &trans         &trans
                                 &trans  &trans  &trans    &trans  &trans         &trans
             >;
@@ -138,7 +138,7 @@
 &trans  &trans        &trans          &trans     &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans          &trans     &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans          &trans                                                     &trans  &trans  &trans  &trans
+&trans  &trans        &trans          &trans     &trans                                  &trans  &trans  &trans  &trans  &trans
                                                  &trans        &trans  &trans    &trans  &trans  &trans
                                                  &trans        &trans  &trans    &trans  &trans  &trans
             >;
@@ -161,14 +161,17 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,
+        //// this gets it to the default installation orientation,,
         //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,
+        //// multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,
         //<&zip_xy_scaler 1 3>,
         // 1/6th speed
         <&zip_xy_scaler 1 6>,
         // make this trackball output scrolling events by default instead of cursor movement,,
-        <&zip_xy_to_scroll_mapper>;
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,
+        <&zip_xy_to_scroll_mapper>,
+        //// invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,
         //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        //Invert the X and Y so the top of the ball moves the same direction as the content, just like a touchpad would.
+        <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
+        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
