@@ -172,6 +172,5 @@
         //// invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,
         //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
         //Invert the X and Y so the top of the ball moves the same direction as the content, just like a touchpad would.
-        <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
-        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
