@@ -22,7 +22,7 @@
             label = "MO_RELEASE_ALL";
         };
 
-        to_w_mod: to_w_mod {6
+        to_w_mod: to_w_mod {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
