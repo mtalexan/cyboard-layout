@@ -82,12 +82,12 @@
 
         Auto_Mouse_Layer {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans                                     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans          &msc SCRL_UP    &trans           &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans     &trans     &trans                                     &trans          &trans          &trans           &trans  &trans
                 &trans     &trans     &trans             &trans  &trans  &trans
                 &trans     &trans     &trans             &trans  &trans  &trans
             >;
@@ -160,14 +160,16 @@
 
 &trackball_central_listener {
     input-processors =
-        //// this gets it to the default installation orientation.
-        //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling).
-        //<&zip_xy_scaler 1 3>,
-        // WARNING: if this ratio gets too high, the trackball ends up with a deadzone to start scrolling.
+        //// this gets it to the default installation orientation.,
+        //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling).,
+        //<&zip_xy_scaler 1 3>,,
+        // WARNING: if this ratio gets too high, the trackball ends up with a deadzone to start scrolling.,
         <&zip_xy_scaler 1 5>;
-        // make this trackball output scrolling events by default instead of cursor movement.
-        <&zip_xy_to_scroll_mapper>;
+
+    // make this trackball output scrolling events by default instead of cursor movement.
+
+    <&zip_xy_to_scroll_mapper>;
 
     //// invert vertical scrolling so that the view moves in the same direction as the top of the trackball.
     //<&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
