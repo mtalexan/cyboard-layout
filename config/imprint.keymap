@@ -43,12 +43,12 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp F1  &kp F2        &kp F3        &kp F4   &kp F5                        &kp F6         &kp F7  &kp F8           &kp F9   &kp F10   &kp F11
-&kp GRAVE  &kp N1  &kp N2        &kp N3        &kp N4   &kp N5                        &kp N6         &kp N7  &kp N8           &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W         &kp E         &kp R    &kp T                         &kp Y          &kp U   &kp I            &kp O    &kp P     &kp BSLH
-&kp TAB    &kp A   &kp S         &kp D         &kp F    &kp G                         &kp H          &kp J   &kp K            &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X         &kp C         &kp V    &kp B                         &kp N          &kp M   &kp COMMA        &kp DOT  &kp FSLH  &kp RSHFT
-&kp LCTRL  &trans  &mo 2         &kp LEFT_GUI  &trans                                                &trans  &kp PRINTSCREEN  &trans   &trans    &kp RIGHT_CONTROL
+&kp ESC    &kp F1  &kp F2        &kp F3        &kp F4   &kp F5                        &kp F6         &kp F7  &kp F8    &kp F9           &kp F10   &kp F11
+&kp GRAVE  &kp N1  &kp N2        &kp N3        &kp N4   &kp N5                        &kp N6         &kp N7  &kp N8    &kp N9           &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W         &kp E         &kp R    &kp T                         &kp Y          &kp U   &kp I     &kp O            &kp P     &kp BSLH
+&kp TAB    &kp A   &kp S         &kp D         &kp F    &kp G                         &kp H          &kp J   &kp K     &kp L            &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X         &kp C         &kp V    &kp B                         &kp N          &kp M   &kp COMMA &kp DOT          &kp FSLH  &kp RSHFT
+&kp LCTRL  &trans  &mo 2         &kp LEFT_GUI  &trans                                                &trans  &trans    &kp PRINTSCREEN  &trans    &kp RIGHT_CONTROL
                    &mo 5         &mo 1         &mo 3            &mkp LCLK  &kp ENTER  &kp SPACE
                    &kp LEFT_ALT  &kp ESCAPE    &kp TAB          &mkp RCLK  &mkp MCLK  &kp BACKSPACE
             >;
@@ -165,7 +165,7 @@
         // multiply sensitivity by 1, divide by 3 (make it slower for scrolling).,
         //<&zip_xy_scaler 1 3>,,
         // WARNING: if this ratio gets too high, the trackball ends up with a deadzone to start scrolling.,
-        <&zip_xy_scaler 1 5>;
+        <&zip_xy_scaler 1 5>,
 
     // make this trackball output scrolling events by default instead of cursor movement.
 
